@@ -36,22 +36,21 @@ Data Processing
 We will use pandas to operate on the csv file of the raw data. The NOAA files comes with the following headers:
 
         Date Time (GMT)  Predicted (ft) Preliminary (ft)  Verified (ft)  
-    0  2023/01/01      00:00           8.684                -           9.19  
-    1  2023/01/01      01:00           7.574                -           8.16  
-    2  2023/01/01      02:00           5.846                -           6.45  
-    3  2023/01/01      03:00           3.745                -           4.48  
-    4  2023/01/01      04:00           1.793                -           2.56  
+    0  2023/01/01  00:00    8.684                -           9.19  
+    1  2023/01/01  01:00    7.574                -           8.16  
+    2  2023/01/01  02:00    5.846                -           6.45  
+    3  2023/01/01  03:00    3.745                -           4.48  
+    4  2023/01/01  04:00    1.793                -           2.56  
 
 
 We will use the verified tide height for the purposes of this experiment, since this is the tide height we know happened. We will calculate the mean of the hourly data to create daily tide means as follows:
 
-	Predicted_mean	Verified_mean	Verified_max	Verified_min  
-Datetime				
-2023-01-01	4.872958	5.464583	10.32	0.83  
-2023-01-02	4.925042	5.384583	10.22	0.97  
-2023-01-03	4.993417	5.487917	10.17	1.00  
-2023-01-04	5.060500	5.751667	10.58	0.72  
-2023-01-05	5.110250	6.272917	11.35	1.4  
+    Datetime	    Predicted_mean	Verified_mean	Verified_max	Verified_min  				
+    2023-01-01	    4.872958	    5.464583	    10.32	        0.83  
+    2023-01-02	    4.925042	    5.384583	    10.22	        0.97  
+    2023-01-03	    4.993417	    5.487917	    10.17           1.00  
+    2023-01-04	    5.060500	    5.751667	    10.58	        0.72  
+    2023-01-05	    5.110250	    6.272917	    11.35	        1.4  
 
 The Verified_max will give us the max tide per day, which we will use to indicate flooding because at some point in a given day, the max tide reached flood conditions. From our thresholds, we see that a minor flood occurs when the tide goes above 12.5ft. This value remains unchanged as NOAA thresholds are based on historical data per station, so 12.5ft is already an estimate for minor flooding based on historical results.
 
