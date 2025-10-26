@@ -17,7 +17,7 @@ Los Angeles, California
 
 This raw data will be put into one dataset to analyze any patterns when it comes to flooding frequency. These trends can be visualized via a histogram of flood frequency by moon phase and a scatter plot comparing weather conditions on days where there was flooding and days where there wasn't flooding. We can then use 80% of the data to train a classification model to estimate flood risk on a given day, likely using XGBoost to predict a binary outcome of a flood day or not a flood day. We can then test this on the remaining 20% of the dataset to evaluate its performance. Performance can be evaluated by a mixture of precision and recall. Recall will help measure how well we identify actual flood days and precision will show how often those predictions are correct.
 
-Midterm Report
+##Midterm Report
 
 Data Collection
 
