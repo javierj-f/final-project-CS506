@@ -36,11 +36,11 @@ Data Processing
 We will use pandas to operate on the csv file of the raw data. The NOAA files comes with the following headers:
 
         Date Time (GMT)  Predicted (ft) Preliminary (ft)  Verified (ft)  
-0  2023/01/01      00:00           8.684                -           9.19  
-1  2023/01/01      01:00           7.574                -           8.16  
-2  2023/01/01      02:00           5.846                -           6.45  
-3  2023/01/01      03:00           3.745                -           4.48  
-4  2023/01/01      04:00           1.793                -           2.56  
+    0  2023/01/01      00:00           8.684                -           9.19  
+    1  2023/01/01      01:00           7.574                -           8.16  
+    2  2023/01/01      02:00           5.846                -           6.45  
+    3  2023/01/01      03:00           3.745                -           4.48  
+    4  2023/01/01      04:00           1.793                -           2.56  
 
 
 We will use the verified tide height for the purposes of this experiment, since this is the tide height we know happened. We will calculate the mean of the hourly data to create daily tide means as follows:
