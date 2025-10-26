@@ -11,7 +11,7 @@ For the purposes of this project, we will choose two cities: one in the east coa
 Boston, Massachusetts  
 Miami, Florida  
 
-If possible, an additional two cities will be studied:
+If possible, an additional two cities will be studied:  
 Seattle, Washington  
 Los Angeles, California     
 
