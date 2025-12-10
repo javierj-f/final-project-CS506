@@ -24,7 +24,7 @@
     jupyter notebook
 
 
-This project will explore the effects of weather conditions and lunar phases on tides in the United States for the purposes of exploring the extent of the impact moon phase has on coastal flooding.  
+This project will explore the extent of the effects of weather conditions and lunar phases on coastal tides in the United States.
 
 It is known that the Moon's phases cause a variation in the tidal range based on the alignment between itself, the Earth and the Sun. On new and full moons, we see more extreme tides as the Earth is in almost perfect alignment with the Sun and Moon, while tides tend to mellow during phases where we see perpendicular alignment that exerts lesser gravitational forces on the tides of the Earth. However, this alone does not directly influence flooding. The weather on Earth also has to play its part, creating a perfect storm for flooding in a U.S. city.
 
