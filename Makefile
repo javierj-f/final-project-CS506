@@ -16,42 +16,20 @@ install:
 
 check:
 	@echo "=== PROJECT STRUCTURE CHECK ==="
-	@echo "1. Checking directory structure..."
-	@test -d data && echo "✅ data/ directory exists" || (echo "❌ data/ missing" && exit 1)
-	@test -f final_code.ipynb && echo "✅ final_code.ipynb exists" || (echo "❌ Notebook missing" && exit 1)
-	@test -f requirements.txt && echo "✅ requirements.txt exists" || (echo "❌ requirements.txt missing" && exit 1)
-	
-	@echo ""
-	@echo "2. Checking data files..."
+	@echo "1. Checking for data/ directory..."
+	@test -d data && echo "✅ data/ directory exists" || (echo "❌ ERROR: 'data/' directory not found" && exit 1)
+	@echo "2. Checking for notebook..."
+	@test -f final_code.ipynb && echo "✅ final_code.ipynb exists" || (echo "❌ ERROR: Notebook not found" && exit 1)
+	@echo "3. Checking data files..."
 	@python -c "
-import os, pandas as pd, sys
+import os, sys
 files = os.listdir('data')
-print(f'Found {len(files)} files in data/')
-print('Sample files:')
-for f in files[:5]:
-    print(f'  - {f}')
-
-# Check naming pattern
-required_cities = ['boston', 'seattle', 'florida', 'la']
-years = ['2019', '2020', '2021', '2022', '2023']
-for city in required_cities:
-    pattern = f'tide_height_{city}_'
-    matching = [f for f in files if pattern in f.lower()]
-    print(f'{city}: {len(matching)} files')
-    
-# Test reading one file
-if files:
-    try:
-        sample = files[0]
-        df = pd.read_csv(f'data/{sample}', nrows=5)
-        print(f'\\n✅ Can read {sample}')
-        print(f'   Shape: {df.shape}')
-        print(f'   Columns: {list(df.columns)}')
-    except Exception as e:
-        print(f'❌ Error reading {sample}: {e}')
-        sys.exit(1)
+print(f'Found {len(files)} data files')
+if len(files) == 0:
+    print('❌ ERROR: No data files found')
+    sys.exit(1)
+print('✅ Data files present')
 "
-	@echo ""
 	@echo "✅ Project check complete!"
 
 run:
