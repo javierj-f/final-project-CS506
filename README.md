@@ -145,7 +145,7 @@ From these results, we can see that the moon phase has noticeable impact on high
 
 In terms of seasonality, we can create a heatmap showing which months of the year are more likely to experience flooding per city. Here, we can see that in most cases, flooding is not indicative of the season except for LA and Florida, with LA having its highest flood probability in August and Florida seeing its peaks in September, October, and November of each year. However, the general lack of strong trends overall does support our hypothesis, given that moon phase is not indicative of the season which means terrestrial climate is not dominating the likelihood of flooding.
 
-![Seasonality of Floods Heatmap](plots\flood_season_heatmap.png)
+![Seasonality of Floods Heatmap](/plots/flood_season_heatmap.png)
 
 ## Conclusion
 
