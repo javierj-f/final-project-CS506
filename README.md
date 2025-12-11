@@ -27,7 +27,7 @@
 
     [CS506 Final Presentation Video](https://youtu.be/Hy6XqKj9vVM)
 
-This project will explore the effects of weather conditions and lunar phases on tides in the United States for the purposes of exploring the extent of the impact moon phase has on coastal flooding.  
+This project will explore the extent of the effects of weather conditions and lunar phases on coastal tides in the United States.
 
 It is known that the Moon's phases cause a variation in the tidal range based on the alignment between itself, the Earth and the Sun. On new and full moons, we see more extreme tides as the Earth is in almost perfect alignment with the Sun and Moon, while tides tend to mellow during phases where we see perpendicular alignment that exerts lesser gravitational forces on the tides of the Earth. However, this alone does not directly influence flooding. The weather on Earth also has to play its part, creating a perfect storm for flooding in a U.S. city.
 
@@ -144,7 +144,11 @@ Training a Logisic Regression model on the datasets using our weather features, 
         2	prcp	        0.014940
         4	Quarter Moon	-0.648296
 
+<<<<<<< HEAD
 From these results, we can see that the moon phase has noticeable impact on high tides in Boston, LA, and Viginia Key. A parallel alignment phase dominates the feature importance, while Quarter Moons are consistently less important. We see that moon phase even trumps weather features indicative of low-pressure systems in the United States. The only outlier is Seattle, where no one feature appears to dominate the others, but we do see that parallel alignment phases and windspeed have similar importance.
+=======
+From these results, we can see that the moon phase has noticeable impact on high tides in Boston, LA, and Virginia Key. A parallel allignment phase dominates the feature importance, while Quarter Moons are consistently less important. We see that moon phase even trumps weather features indicative of low-pressure systems in the United States. The only outlier is Seattle, where no one feature appears to dominate the others, but we do see that parallel alignment phases and windspeed have similar importance.
+>>>>>>> e8b488a8cb178f4afd3ee0d7d156f5f7a2175ade
 
 In terms of seasonality, we can create a heatmap showing which months of the year are more likely to experience flooding per city. Here, we can see that in most cases, flooding is not indicative of the season except for LA and Florida, with LA having its highest flood probability in August and Florida seeing its peaks in September, October, and November of each year. However, the general lack of strong trends overall does support our hypothesis, given that moon phase is not indicative of the season which means terrestrial climate is not dominating the likelihood of flooding.
 
